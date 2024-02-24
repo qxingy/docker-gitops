@@ -1,0 +1,18 @@
+[package]
+name = "docker-gitops"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.80"
+bollard = { version = "0.15.0", features = ["buildkit"] }
+git2 = { version = "0.18.2", features = [
+    "vendored-openssl",
+    "vendored-libgit2",
+] }
+rocket = "0.5.0"
+serde = "1.0.197"
+serde_json = "1.0.114"
+tokio = { version = "1.36.0", features = ["full"] }
